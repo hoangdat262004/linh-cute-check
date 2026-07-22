@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌸 Linh's Cute Check 🌸</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Comic Sans MS", "Segoe UI", sans-serif;
+}
+
+
+body{
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ffd6e8,
+    #e8dcff,
+    #d8f7ff
+    );
+
+
+    color:#6b4160;
+
+}
+
+
+
+/* ===== Nền hoa bay ===== */
+
+
+.flower{
+
+    position:absolute;
+
+    top:-50px;
+
+    font-size:25px;
+
+    animation:fall linear infinite;
+
+}
+
+
+@keyframes fall{
+
+    from{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+
+    30%{
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+
+/* ===== Khung chính ===== */
+
+
+.card{
+
+    width:90%;
+
+    max-width:620px;
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    background:
+
+    rgba(255,255,255,.7);
+
+
+    border-radius:40px;
+
+
+    border:3px solid white;
+
+
+    backdrop-filter:blur(15px);
+
+
+    box-shadow:
+
+    0 20px 60px
+
+    rgba(255,100,170,.35);
+
+
+    animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+
+}
+
+
+
+
+
+h1{
+
+    color:#ff5c9d;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+
+    text-shadow:
+
+    0 0 15px white;
+
+
+}
+
+
+
+
+#screen{
+
+    min-height:180px;
+
+    font-size:22px;
+
+    line-height:40px;
+
+
+}
+
+
+
+
+
+/* ===== Nút ===== */
+
+
+button{
+
+
+    margin-top:25px;
+
+
+    padding:15px 35px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+    font-size:20px;
+
+
+    font-weight:bold;
+
+
+
+    background:
+
+    linear-gradient(
+
+    45deg,
+
+    #ff85b3,
+
+    #ff4d94
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 10px 25px
+
+    rgba(255,70,150,.4);
+
+
+
+    animation:pulse 2s infinite;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+}
+
+
+
+@keyframes pulse{
+
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.15);
+
+}
+
+
+
+
+button::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:50px;
+
+    height:100%;
+
+
+    background:white;
+
+
+    opacity:.5;
+
+
+    top:0;
+
+    left:-80px;
+
+
+    transform:skewX(-20deg);
+
+
+    animation:shine 3s infinite;
+
+}
+
+
+
+@keyframes shine{
+
+
+    40%{
+
+        left:130%;
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ===== Loading ===== */
+
+
+.loading-box{
+
+    margin-top:20px;
+
+}
+
+
+
+.loading{
+
+
+    width:100%;
+
+    height:25px;
+
+
+    background:#ffe5f2;
+
+
+    border-radius:30px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.loading-bar{
+
+
+    width:0%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #ff7eb3,
+
+    #ffb6e6,
+
+    #8ee7ff
+
+    );
+
+
+
+    transition:.05s;
+
+
+}
+
+
+
+#percent{
+
+    margin-top:10px;
+
+    font-size:24px;
+
+    color:#ff4d94;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* ===== Emoji ===== */
+
+
+.emoji{
+
+    position:absolute;
+
+    top:-40px;
+
+    font-size:30px;
+
+
+    animation:emojiFall linear forwards;
+
+
+}
+
+
+
+@keyframes emojiFall{
+
+
+    to{
+
+        transform:
+
+        translateY(110vh)
+
+        rotate(720deg);
+
+
+        opacity:0;
+
+    }
+
+
+}
+
+
+
+
+/* ===== Hộp quà ===== */
+
+
+.gift{
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    animation:shake 1.5s infinite;
+
+}
+
+
+
+@keyframes shake{
+
+
+    50%{
+
+        transform:rotate(10deg);
+
+    }
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+<h1>
+🌸 Linh's Cute Check 🌸
+</h1>
+
+
+<div id="screen">
+
+🌷 Xin chào Linh 🌷
+
+<br>
+
+Một bài kiểm tra bí mật đang chờ...
+
+<br><br>
+
+💗 Sẵn sàng chưa?
+
+</div>
+
+
+<button id="startBtn" onclick="startGame()">
+
+🎀 Bắt đầu thôi 🎀
+
+</button>
+
+
+</div>
+<script>
+
+
+// =====================
+// TẠO HOA BAY NỀN
+// =====================
+
+let flowers=[
+"🌸","🌷","🌼","✨","💗","⭐"
+];
+
+
+for(let i=0;i<35;i++){
+
+    let f=document.createElement("div");
+
+    f.className="flower";
+
+    f.innerHTML=
+    flowers[Math.floor(Math.random()*flowers.length)];
+
+    f.style.left=
+    Math.random()*100+"vw";
+
+
+    f.style.animationDuration=
+    (5+Math.random()*8)+"s";
+
+
+    f.style.animationDelay=
+    Math.random()*5+"s";
+
+
+    document.body.appendChild(f);
+
+}
+
+
+
+// =====================
+// DỮ LIỆU CÂU CHUYỆN
+// =====================
+
+
+const scenes=[
+
+
+"🌸 Đang khởi động hệ thống kiểm tra vui vẻ...",
+
+
+"💗 Đang kết nối với năng lượng tích cực của Linh...",
+
+
+"🔍 Đang quét Linh...",
+
+
+"📸 Phân tích nụ cười...",
+
+
+"🍓 Kiểm tra mức độ dễ thương...",
+
+
+"✔ Phát hiện: Hay cười.",
+
+
+"✔ Phát hiện: Có năng lượng làm người khác vui.",
+
+
+"🤣 Đang đo độ lầy...",
+
+
+"⚠ CẢNH BÁO!",
+
+
+"Độ hài hước vượt mức an toàn 😂",
+
+
+"🎁 Đang chuẩn bị phần thưởng...",
+
+
+"💎 Đang mở khóa danh hiệu...",
+
+
+"👑 Công chúa tấu hài đã xuất hiện!",
+
+
+"🌈 Chúc mừng Linh đạt cấp độ vui vẻ MAX!"
+
+
+
+];
+
+
+
+let index=0;
+
+
+let screen=document.getElementById("screen");
+
+let btn=document.getElementById("startBtn");
+
+
+
+
+// =====================
+// BẮT ĐẦU GAME
+// =====================
+
+
+function startGame(){
+
+
+
+    btn.style.display="none";
+
+
+    createEffect();
+
+
+    setTimeout(()=>{
+
+        runScene();
+
+
+    },700);
+
+
+
+}
+
+
+
+
+// =====================
+// CHẠY TỪNG CẢNH
+// =====================
+
+
+function runScene(){
+
+
+
+    if(index>=scenes.length){
+
+
+        showGift();
+
+
+        return;
+
+    }
+
+
+
+    let text=scenes[index];
+
+
+
+    if(text==="🔍 Đang quét Linh..."){
+
+
+        index++;
+
+        loadingScan();
+
+
+        return;
+
+    }
+
+
+
+
+    screen.innerHTML=text;
+
+
+
+    createEffect();
+
+
+
+    index++;
+
+
+    setTimeout(runScene,1500);
+
+
+
+}
+
+
+
+
+
+
+
+// =====================
+// THANH LOADING
+// =====================
+
+
+function loadingScan(){
+
+
+
+screen.innerHTML=`
+
+🔍 Đang quét Linh...
+
+<div class="loading-box">
+
+
+<div class="loading">
+
+<div class="loading-bar" id="bar"></div>
+
+</div>
+
+
+<div id="percent">
+0%
+</div>
+
+
+</div>
+
+`;
+
+
+
+let p=0;
+
+
+let timer=setInterval(()=>{
+
+
+    p++;
+
+
+    document.getElementById("bar").style.width=
+    p+"%";
+
+
+    document.getElementById("percent").innerHTML=
+    p+"%";
+
+
+
+    if(p>=100){
+
+
+        clearInterval(timer);
+
+
+        createEffect();
+
+
+        setTimeout(runScene,1000);
+
+
+    }
+
+
+
+},35);
+
+
+
+}
+
+
+
+
+
+
+
+
+// =====================
+// HIỆU ỨNG EMOJI
+// =====================
+
+
+function createEffect(){
+
+
+
+let icons=[
+
+"🌸",
+"💗",
+"😂",
+"✨",
+"🎀",
+"🌈",
+"👑"
+
+];
+
+
+
+for(let i=0;i<12;i++){
+
+
+
+let e=document.createElement("div");
+
+
+e.className="emoji";
+
+
+e.innerHTML=
+icons[Math.floor(Math.random()*icons.length)];
+
+
+e.style.left=
+Math.random()*100+"vw";
+
+
+
+e.style.animationDuration=
+(2+Math.random()*3)+"s";
+
+
+
+document.body.appendChild(e);
+
+
+
+setTimeout(()=>{
+
+e.remove();
+
+},5000);
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// =====================
+// HỘP QUÀ CUỐI
+// =====================
+
+
+function showGift(){
+
+
+
+screen.innerHTML=`
+
+<div class="gift" onclick="openGift()">
+
+🎁
+
+</div>
+
+
+<br>
+
+
+💗 Có một món quà bí mật...
+
+
+<br>
+
+
+👉 Bấm vào hộp quà
+
+
+`;
+
+
+
+}
+
+
+
+
+function openGift(){
+
+
+
+createEffect();
+
+
+
+screen.innerHTML=`
+
+<h2>
+✨ BÙM ✨
+</h2>
+
+
+<br>
+
+
+👑 Danh hiệu của Linh:
+
+
+<br><br>
+
+
+<h2 style="color:#ff4d94">
+
+🌸 CÔNG CHÚA TẤU HÀI 🌸
+
+</h2>
+
+
+<br>
+
+
+😂 Cấp độ vui vẻ:
+
+<br>
+
+
+<h2>
+9999%
+</h2>
+
+
+<br>
+
+
+💌 Lời nhắn bí mật:
+
+
+<br><br>
+
+
+"Linh hãy luôn giữ nụ cười này nhé.
+
+Vì một người vui vẻ luôn làm mọi thứ xung quanh tốt hơn 🌸"
+
+
+`;
+
+
+
+btn.style.display="block";
+
+
+btn.innerHTML="🔄 Chơi lại";
+
+
+btn.onclick=()=>{
+
+location.reload();
+
+};
+
+
+
+createEffect();
+
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
+
